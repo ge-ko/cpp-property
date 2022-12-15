@@ -60,16 +60,16 @@ struct class_with_properties
         set { _numbers = value; }
     };
 
+    // mutable scalar reference based on underlying pointer
     private: int* _iptr = nullptr;
-    // mutable reference based on underlying pointer
     public: property<int&> ref
     {
         get { return *_iptr; },
         set { _iptr = value; }
     };
 
+    // mutable class reference based on underlying pointer
     private: string* _strptr = nullptr;
-    // mutable reference based on underlying pointer
     public: property<string&> ref2
     {
         get { return *_strptr; },
