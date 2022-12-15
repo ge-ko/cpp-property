@@ -64,28 +64,16 @@ struct class_with_properties
     // mutable reference based on underlying pointer
     public: property<int&> ref
     {
-        get
-        {
-            return *_iptr;
-        },
-        set
-        {
-            _iptr = value;
-        }
+        get { return *_iptr; },
+        set { _iptr = value; }
     };
 
     private: string* _strptr = nullptr;
     // mutable reference based on underlying pointer
     public: property<string&> ref2
     {
-        get
-        {
-            return *_strptr;
-        },
-        set
-        {
-            _strptr = value;
-        }
+        get { return *_strptr; },
+        set { _strptr = value; }
     };
 };
 
